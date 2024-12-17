@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sampark Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Left Section (Logo) -->
+            <div class="logo-section">
+                <img src="left.jpg" alt="L&T Energy CarbonLite Solutions">
+            </div>
+
+            <!-- Middle Section (Sampark) -->
+            <div class="sampark-section">
+                <img src="middle.jpg" alt="संपर्क Sampark">
+                <div class="vertical-line"></div>
+                <span class="unit-name">Unit - Department Name</span>
+            </div>
+
+            <!-- Right Section (Certification) -->
+            <div class="certification-section">
+                <img src="rhs.png" alt="Great Place To Work Certified">
+            </div>
+        </div>
+    </header>
+
+    <!-- Your Navbar (for overlap) -->
+    <nav class="navbar">
+        <!-- Navbar Content -->
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+
+
+
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="schedule-discussion.html">Schedule Discussion</a></li>
+            <li><a href="update-records.html">Update Records of Conducted Meetings</a></li>
+            <li><a href="download-report.html">Download Report</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="HR-Dashboard.html">HR Dashboard</a></li>
+        </ul>
+    </nav>
+
+
+    <main class="main-content">
+        <div class="status-bars">
+            <div class="status-bar green">
+                <span>Meetings Done – 20</span>
+                <span>10%</span>
+            </div>
+            <div class="status-bar red">
+                <span>Pending Sampark – 40</span>
+                <span>90%</span>
+            </div>
+        </div>
+
+        
+    
+            <div class="dashboard-grid">
+                <div class="meetings-section">
+                    <div class="meeting-cards">
+                        <h3 class="section-title">Meetings Scheduled - 3</h3>
+                        <div class="employee-cards">
+                            <div class="employee-card card-scheduled">
+                                <div class="profile-pic" onclick="showEmployeeDetails()">
+                                    <!-- Dynamic Employee Image with Fallback -->
+                                    <img src="employee.jpg" alt="Employee Photo" onerror="this.src='https://via.placeholder.com/50';">
+                                </div>
+                                <div class="card-details">
+                                    <h4>Employee 2</h4>
+                                    <p>Last Meeting Date : 28-04-2025</p>
+                                </div>
+                                <div class="card-icons">
+                                    <svg class="icon note-icon" onclick="showNotesPopup()" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                                        <path d="M12 6v6l4 2" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        
+                            <!-- Notes Popup -->
+                            <div id="notesPopup" class="popup">
+                                <div class="popup-content">
+                                    <span class="close" onclick="closePopup('notesPopup')">&times;</span>
+                                    <h3>Meeting Notes</h3>
+                                    
+                                    <!-- Toolbar for formatting -->
+                                    <div class="toolbar">
+                                        <button onclick="formatText('bold')"><strong>B</strong></button>
+                                        <button onclick="formatText('italic')"><em>I</em></button>
+                                        <button onclick="formatText('underline')"><u>U</u></button>
+                                      
+<!-- Dropdown for bullets -->
+<div class="dropdown">
+    <button class="dropdown-button">Bullets</button>
+    <div class="dropdown-content">
+        <button onclick="addList('disc')">&#8226; Disc</button>
+        <button onclick="addList('circle')">○ Circle</button>
+        <button onclick="addList('square')">■ Square</button>
+    </div>
+</div>
+
+<!-- Dropdown for numbering -->
+<div class="dropdown">
+    <button class="dropdown-button">Numbering</button>
+    <div class="dropdown-content">
+        <button onclick="addNumberedList('decimal')">1. Decimal</button>
+        <button onclick="addNumberedList('upper-roman')">I. Upper Roman</button>
+        <button onclick="addNumberedList('lower-alpha')">a. Lower Alpha</button>
+    </div>
+</div>
+
+
+
+                                        <button onclick="attachImage()">Attach Image</button>
+                                    </div>
+                                    
+                                    <!-- Rich Text Area -->
+                                    <div contenteditable="true" id="meetingNotes" class="editable-area" placeholder="Enter meeting notes here..."></div>
+                                    
+                                    <!-- Attach Image -->
+                                    <div id="imagePreview"></div>
+                                    <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="previewImage(event)">
+                                    
+                                    <!-- Employee Rating -->
+                                    <div class="rating-section">
+                                        <label for="rating">Employee Rating:</label>
+                                        <select id="rating">
+                                            <option value="1">1 - Poor</option>
+                                            <option value="2">2 - Fair</option>
+                                            <option value="3">3 - Good</option>
+                                            <option value="4">4 - Very Good</option>
+                                            <option value="5">5 - Excellent</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <button onclick="saveNotes()">Save Notes</button>
+                                </div>
+                            </div>
+                            
+                        
+                            <!-- Employee Details Popup -->
+                            <div id="employeeDetailsPopup" class="popup">
+                                <div class="popup-content">
+                                    <span class="close" onclick="closePopup('employeeDetailsPopup')">&times;</span>
+                                    <h3>Employee Details</h3>
+                                    <div class="employee-details-grid">
+                                        <div class="employee-photo">
+                                            <img src="employee.jpg" alt="Employee Photo">
+                                        </div>
+                                        <ul class="employee-info">
+                                            <li><strong>PS No.:</strong> 123456</li>
+                                            <li><strong>Name:</strong> Employee 2</li>
+                                            <li><strong>Band:</strong> B2</li>
+                                            <li><strong>Grade:</strong> 4</li>
+                                            <li><strong>Unit:</strong> IT</li>
+                                            <li><strong>Dept.:</strong> Software</li>
+                                            <li><strong>Current Location:</strong> Bangalore</li>
+                                            <li><strong>IS Name:</strong> Rameek</li>
+                                            <li><strong>NS Name:</strong> -</li>
+                                            <li><strong>Mobile No.:</strong> 9876543210</li>
+                                            <li><strong>Meeting Notes:</strong>
+                                                <div id="savedNotes">No notes available.</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="employee-card card-scheduled">
+                                <div class="profile-pic"></div>
+                                <div class="card-details">
+                                    <h4>Employee 2</h4>
+                                    <p>Last Meeting Date : 28-04-2025</p>
+                                  
+                                </div>
+                                <div class="card-icons">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                                        <path d="M12 6v6l4 2" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+    
+                            <div class="employee-card card-scheduled">
+                                <div class="profile-pic"></div>
+                                <div class="card-details">
+                                    <h4>Employee 3</h4>
+                                    <p>Last Meeting Date : 30-04-2024</p>
+                               
+                                </div>
+                                <div class="card-icons">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                                        <path d="M12 6v6l4 2" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card-grid">
+                        <div class="meeting-cards">
+                            <h3 class="section-title">Overdue - 1</h3>
+                            <div class="employee-card card-overdue">
+                                <div class="profile-pic"></div>
+                                <div class="card-details">
+                                    <h4>Employee 4</h4>
+                                    <p>Last Meeting Date : 28-04-2025</p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="meeting-cards">
+                            <h3 class="section-title">Due in Next Month - 1</h3>
+                            <div class="employee-card card-due">
+                                <div class="profile-pic"></div>
+                                <div class="card-details">
+                                    <h4>Employee 5</h4>
+                                    <p>Last Meeting Date : 28-04-2025</p>
+                                   
+                                </div>
+                                <div class="card-icons">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="meeting-cards">
+                            <h3 class="section-title">Meetings Recently Covered - 1</h3>
+                            <div class="employee-card card-covered">
+                                <div class="profile-pic"></div>
+                                <div class="card-details">
+                                    <h4>Employee 6</h4>
+                                    <p>Last Meeting Date : 28-04-2025</p>
+                                    
+                                </div>
+                                <div class="card-icons">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-calendar-container">
+                   
+                        <div class="input-container">
+                            <div class="chart-container">
+                                
+                                <canvas id="coverageChart"></canvas>
+                            </div>
+                            
+
+
+                           
+                            
+                            
+                                
+                          
+                    </div>
+
+                    
+                    
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="nav-button" onclick="previousMonth()">Previous</button>
+                            <h3 id="currentMonth">November 2024</h3>
+                            <button class="nav-button" onclick="nextMonth()">Next</button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid"></div>
+                    </div>
+                </div>
+                
+                
+                </div>
+              
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

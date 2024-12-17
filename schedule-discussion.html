@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Report</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Left Section (Logo) -->
+            <div class="logo-section">
+                <img src="left.jpg" alt="L&T Energy CarbonLite Solutions">
+            </div>
+
+            <!-- Middle Section (Sampark) -->
+            <div class="sampark-section">
+                <img src="middle.jpg" alt="संपर्क Sampark">
+                <div class="vertical-line"></div>
+                <span class="unit-name">Unit - Department Name</span>
+            </div>
+
+            <!-- Right Section (Certification) -->
+            <div class="certification-section">
+                <img src="rhs.png" alt="Great Place To Work Certified">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="schedule-discussion.html">Schedule Discussion</a></li>
+            <li><a href="update-records.html">Update Records of Conducted Meetings</a></li>
+            <li><a href="download-report.html">Download Report</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Discussion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <main>
+        <header>
+            <h1>Schedule Meetings</h1>
+        </header>
+        <div class="container">
+            <form id="schedule-form">
+                <!-- Employee Selection -->
+                <div class="form-group">
+                    <label for="employee">Employee Name:</label>
+                    <input list="employee-list" id="employee" placeholder="Enter or Select Employee Name">
+                    <datalist id="employee-list">
+                        <option value="E001 - Employee 1"></option>
+                        <option value="E002 - Employee 2"></option>
+                        <option value="E003 - Employee 3"></option>
+                        <option value="E004 - Employee 4"></option>
+                    </datalist>
+                </div>
+    
+                <!-- Meeting Subject -->
+                <div class="form-group">
+                    <label for="meeting-subject">Meeting Subject:</label>
+                    <input type="text" id="meeting-subject" placeholder="Enter Meeting Subject" required>
+                </div>
+    
+                <!-- Schedule Date -->
+                <div class="form-group">
+                    <label for="schedule-date">Schedule Date:</label>
+                    <input type="date" id="schedule-date" required>
+                </div>
+    
+                <!-- Start Time -->
+                <div class="form-group">
+                    <label for="start-time">Start Time:</label>
+                    <input type="time" id="start-time" value="09:00" required>
+                </div>
+    
+                <!-- End Time -->
+                <div class="form-group">
+                    <label for="end-time">End Time:</label>
+                    <input type="time" id="end-time" value="09:30" required>
+                </div>
+    
+                <!-- Meeting Duration (Optional) -->
+                <div class="form-group">
+                    <label for="meeting-duration">Meeting Duration:</label>
+                    <select id="meeting-duration">
+                        <option value="30">30 Minutes</option>
+                        <option value="60">1 Hour</option>
+                        <option value="90">1.5 Hours</option>
+                        <option value="120">2 Hours</option>
+                        <option value="150">2.5 Hours</option>
+                        <option value="180">3 Hours</option>
+                    </select>
+                </div>
+    
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </main>
+    
+    <!-- Optional: Add a calendar view to highlight scheduled dates -->
+    <div id="calendar">
+        <!-- Here, you can integrate a calendar to highlight blocked dates -->
+    </div>
+    
+    <script src="scripts.js"></script>
+    
+</body>
+</html>

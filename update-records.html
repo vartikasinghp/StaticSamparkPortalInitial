@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Records of Conducted Meetings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Left Section (Logo) -->
+            <div class="logo-section">
+                <img src="left.jpg" alt="L&T Energy CarbonLite Solutions">
+            </div>
+
+            <!-- Middle Section (Sampark) -->
+            <div class="sampark-section">
+                <img src="middle.jpg" alt="संपर्क Sampark">
+                <div class="vertical-line"></div>
+                <span class="unit-name">Unit - Department Name</span>
+            </div>
+
+            <!-- Right Section (Certification) -->
+            <div class="certification-section">
+                <img src="rhs.png" alt="Great Place To Work Certified">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="schedule-discussion.html">Schedule Discussion</a></li>
+            <li><a href="update-records.html">Update Records of Conducted Meetings</a></li>
+            <li><a href="download-report.html">Download Report</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <header>
+            <h1>Update Records of Conducted Meetings</h1>
+        </header>
+        <form id="update-form">
+            <div class="form-group">
+                <label for="employee">Employee Name:</label>
+                <input type="text" id="employee" name="employee" placeholder="Enter Employee Name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="meeting-date">Meeting Date:</label>
+                <input type="date" id="meeting-date" name="meeting-date" required>
+            </div>
+    
+            <div id="warning-message" style="color: red; display: none;">
+                <strong>Warning: The selected date is a holiday or weekly-off!</strong>
+            </div>
+    
+            <button type="submit">Update Record</button>
+        </form>
+    </main>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

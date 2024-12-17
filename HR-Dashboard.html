@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Update records and view summaries of conducted meetings in this HR Dashboard.">
+    <title>Update Records of Conducted Meetings</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Left Section (Logo) -->
+            <div class="logo-section">
+                <img src="left.jpg" alt="L&T Energy CarbonLite Solutions" aria-label="Company Logo">
+            </div>
+
+            <!-- Middle Section (Sampark) -->
+            <div class="sampark-section">
+                <img src="middle.jpg" alt="संपर्क Sampark" aria-label="Sampark Initiative Logo">
+                <div class="vertical-line" aria-hidden="true"></div>
+                <span class="unit-name">Unit - Department Name</span>
+            </div>
+
+            <!-- Right Section (Certification) -->
+            <div class="certification-section">
+                <img src="rhs.png" alt="Great Place To Work Certified" aria-label="Certification Badge">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+            <li><a href="schedule-discussion.html">Schedule Discussion</a></li>
+            <li><a href="update-records.html">Update Records of Conducted Meetings</a></li>
+            <li><a href="download-report.html">Download Report</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+            <h1>HR Dashboard</h1>
+        </header>
+
+        <!-- Summary Graph Section -->
+        <section id="summary" aria-labelledby="summary-heading">
+            <h2 id="summary-heading">Summary Graphs</h2>
+            <div class="chart-container">
+                <canvas id="eligibleVsCompletedChart" aria-label="Eligible vs Completed Chart"></canvas>
+            </div>
+        </section>
+
+        <!-- Units Section -->
+        <section id="units" aria-labelledby="units-heading">
+            <h2 id="units-heading">Units</h2>
+            <div id="unitList" class="grid">
+                <!-- Units will be dynamically populated here -->
+            </div>
+        </section>
+
+        <!-- Department-Wise Details Section -->
+        <section id="details" class="hidden" aria-labelledby="details-heading">
+            <h2 id="details-heading">Department-Wise Details</h2>
+            <table aria-describedby="details-heading">
+                <thead>
+                    <tr>
+                        <th>Department</th>
+                        <th>Eligible</th>
+                        <th>Completed</th>
+                    </tr>
+                </thead>
+                <tbody id="detailsTable">
+                    <!-- Details dynamically populated -->
+                </tbody>
+            </table>
+            <button id="backToUnits">Back to Units</button>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="scripts.js" defer></script>
+</body>
+</html>

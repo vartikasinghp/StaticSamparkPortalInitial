@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Report</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Left Section (Logo) -->
+            <div class="logo-section">
+                <img src="left.jpg" alt="L&T Energy CarbonLite Solutions">
+            </div>
+
+            <!-- Middle Section (Sampark) -->
+            <div class="sampark-section">
+                <img src="middle.jpg" alt="संपर्क Sampark">
+                <div class="vertical-line"></div>
+                <span class="unit-name">Unit - Department Name</span>
+            </div>
+
+            <!-- Right Section (Certification) -->
+            <div class="certification-section">
+                <img src="rhs.png" alt="Great Place To Work Certified">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="schedule-discussion.html">Schedule Discussion</a></li>
+            <li><a href="update-records.html">Update Records of Conducted Meetings</a></li>
+            <li><a href="download-report.html">Download Report</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <header class="section-header">
+                <h1>Download Report</h1>
+            </header>
+    
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <label for="status-filter">Filter by Status:</label>
+                <select id="status-filter">
+                    <option value="all">All</option>
+                    <option value="covered">Covered</option>
+                    <option value="overdue">Overdue</option>
+                    <option value="scheduled">Scheduled</option>
+                </select>
+            </div>
+    
+            <!-- Employee Table -->
+            <div class="report-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PS No.</th>
+                            <th>Name</th>
+                            <th>Grade</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="employee-table-body">
+                        <!-- Rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+    
+            <!-- Export Button -->
+            <div class="export-section">
+                <button id="export-btn">Export to Excel</button>
+            </div>
+        </div>
+    
+    </main>
+                <!-- Link to download the sample Excel file -->
+                <a href="'/Users/vartikasingh/Desktop/LnT At a Stretch/Database Tables Required Excel.xlsx'" id="download-report" class="btn btn-primary" download>
+                    Download Report (Excel)
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
